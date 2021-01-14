@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactoryProject.Equipment.Wheels
 {
-    class ExtraWheel : IWheel
+    public class ExtraWheel : IWheel
     {
     }
 }
