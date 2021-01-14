@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using AbstractFactoryProject.CarEquipmentFactories;
 
 namespace AbstractFactoryProject
@@ -22,6 +23,7 @@ namespace AbstractFactoryProject
 
         public ICarEquipmentFactory GetFactory(string key)
         {
+            Console.WriteLine($"The assembly of the {key} car has begun...");
             return factories[key];
         }
     }

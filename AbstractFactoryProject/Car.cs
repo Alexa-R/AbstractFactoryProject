@@ -7,33 +7,17 @@ namespace AbstractFactoryProject
 {
     public class Car
     {
-        private IEngine _engine;
-        private IWheel _wheel;
-        private ISuspensions _suspensions;
-
         public Car(ICarEquipmentFactory factory)
         {
-            _engine = factory.CreateEngine();
-            _wheel = factory.CreateWheel();
-            _suspensions = factory.CreateSuspensions();
+            Engine = factory.CreateEngine();
+            Suspensions = factory.CreateSuspensions();
+            Wheel = factory.CreateWheel();
         }
 
-        public IEngine Engine
-        {
-            get => _engine;
-            set => _engine = value;
-        }
+        public IEngine Engine { get; set; }
 
-        public IWheel Wheel
-        {
-            get => _wheel;
-            set => _wheel = value;
-        }
+        public ISuspensions Suspensions { get; set; }
 
-        public ISuspensions Suspensions
-        {
-            get => _suspensions;
-            set => _suspensions = value;
-        }
+        public IWheel Wheel { get; set; }
     }
 }
